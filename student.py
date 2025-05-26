@@ -4,7 +4,7 @@ class Student:
         s.name =name
         s.grades = []
         s.isPassed = "NO"
-        s.honor = "?"
+        s.honor = bool
 
     def addGrades(self, g):
         self.grades.append(g)
@@ -29,11 +29,12 @@ class Student:
         print("Final Grade = " + self.calcAverage)
 
     def startrun():
-        a = student("x","")
+        a = Student("x","")
         a.addGrades(100)
         a.addGrades("Fifty") # broken
-        a.calcaverage()
+        a.calcAverage()
         a.checkHonor()
         a.deleteGrade(5) # IndexError
         a.report()
+
     startrun()
